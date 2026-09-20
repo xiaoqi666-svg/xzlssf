@@ -1,15 +1,17 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "today-campus-share",
+  "name": "xzlssf",
   "main": "src/index.js",
   "compatibility_date": "2026-09-20",
+
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "today-campus-share-db",
-      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+      "database_name": "SZLSSF",
+      "database_id": "516328f4-ed1c-4ed6-a83d-d8466436124b"
     }
   ],
+
   "vars": {
     "SHARE_BASE_URL": ""
   }
