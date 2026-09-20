@@ -38,7 +38,7 @@ async function route(request, env) {
     return json({
       success: true,
       service: "today-campus-share",
-      serviceVersion: "2.5.1-hard-trim",
+      serviceVersion: "2.5.2-buildfix",
       time: new Date().toISOString()
     });
   }
@@ -402,25 +402,7 @@ function resultDetailRow(label, value, link = false) {
     </div>`;
 }
 
-function shareAvatar(role, gender) {
-  if (role === "student") {
-    return gender === "female"
-      ? SHARE_STUDENT_FEMALE_AVATAR
-      : SHARE_STUDENT_MALE_AVATAR;
-  }
-  return gender === "female"
-    ? SHARE_APPROVER_FEMALE_AVATAR
-    : SHARE_APPROVER_MALE_AVATAR;
-}
 
-function resultDetailRow(label, value, link = false) {
-  const display = value && value !== "-" ? value : "-";
-  return `
-    <div class="detail-row">
-      <div class="detail-label">${escapeHtml(label)}</div>
-      <div class="detail-value${link ? " link" : ""}">${nl2br(escapeHtml(display))}</div>
-    </div>`;
-}
 
 function renderSharePage(data, row) {
   const studentAvatar = shareAvatar("student", data.studentGender);

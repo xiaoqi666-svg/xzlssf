@@ -240,3 +240,22 @@ Git 提交后触发一次新的 Production deployment 即可。
    - “续假”
    - “销假”
 3. App 内部的底部操作栏仍保留，并由 APK 根据系统时间动态切换。
+
+
+---
+
+## V2.5.2 构建修复
+
+修复 Cloudflare Pages Functions 构建时报错：
+
+```text
+The symbol "shareAvatar" has already been declared
+The symbol "resultDetailRow" has already been declared
+```
+
+原因是 `_worker.js` 中这两个辅助函数被重复声明。
+
+本版本已经去重，并保留：
+- `serviceVersion: "2.5.1-hard-trim"`
+- 分享页只显示到“审批人”
+- 分享页不显示底部操作栏
