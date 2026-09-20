@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "xzlssf",
+  "pages_build_output_dir": "./public",
+  "compatibility_date": "2026-09-20",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "SZLSSF",
+      "database_id": "516328f4-ed1c-4ed6-a83d-d8466436124b"
+    }
+  ],
+  "vars": {
+    "SHARE_BASE_URL": "https://xzlssf.pages.dev"
+  }
+}
